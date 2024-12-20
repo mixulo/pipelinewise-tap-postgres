@@ -412,6 +412,7 @@ def main_impl():
         'break_at_end_lsn': args.config.get('break_at_end_lsn', True),
         'logical_poll_total_seconds': float(args.config.get('logical_poll_total_seconds', 0)),
         'use_secondary': args.config.get('use_secondary', False),
+        'disable_xmin_resuming': args.config.get('disable_xmin_resuming', False),
     }
 
     if conn_config['use_secondary']:

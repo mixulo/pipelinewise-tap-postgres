@@ -70,6 +70,7 @@ Full list of options in `config.json`:
 | use_secondary                       | Boolean | No         | Use a database replica for `INCREMENTAL` and `FULL_TABLE` replication (Default : False) |
 | secondary_host                      | String  | No         | PostgreSQL Replica host (required if `use_secondary` is `True`) |
 | secondary_port                      | Integer | No         | PostgreSQL Replica port (required if `use_secondary` is `True`) |
+| disable_xmin_resuming               | Boolean | No         | Do not use the `xmin` system column to resume the interrupted full replication. Useful for tables without standard PostgreSQL system columns like Citus columnars. (Default: false) |
 
 
 ### Run the tap in Discovery Mode
